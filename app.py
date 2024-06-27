@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 from main import run_garak_command
+import streamlit.components.v1 as components
 
 st.set_page_config(layout='wide')
 
@@ -53,6 +54,13 @@ with st.form(key='my_form'):
         run_garak_command(model_type,model_name,probes,generations)
         # print(model_type,model_name,probes,generations)
     # submit_button = st.form_submit_button(label='Submit')
+        name ="report1"
+        st.write("test html import")
+
+        HtmlFile = open(f"{name}.report.html", 'r', encoding='utf-8')
+        source_code = HtmlFile.read() 
+        print(source_code)
+        components.html(source_code,height=2000)
 
     
 # print(st.session_state['model_name'] )

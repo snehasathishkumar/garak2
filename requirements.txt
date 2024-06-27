@@ -1,2 +1,5 @@
 garak
 streamlit
+google_generativeai
+python-dotenv
+

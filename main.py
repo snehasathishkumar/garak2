@@ -6,7 +6,8 @@ def run_garak_command(model_type:str , model_name:str, probes:str, generations:i
         '--model_type', model_type,
         '--model_name', model_name,
         '--probes', probes,
-        '--generations', generations
+        '--generations', generations,
+        '--report_prefix', './garak_runs/report1'
     ]
     # print (model_type)
     print(type("sucess"))

@@ -1,0 +1,24 @@
+{
+    "rest": {
+    "RestGenerator": {
+    "name": "garak test", 
+    "uri": "https://api.segment.io/v1/t", 
+    "method": "post" ,    
+    "headers": { 
+    
+        "content-type": "text/plain"
+    
+    }, 
+    "req_template_json_object": {
+            
+        "text": "$INPUT"
+    
+    },
+    "response_json": true,
+    "response_json_field": "text"
+    
+    }
+    
+ }
+    
+}
