@@ -1,13 +1,14 @@
 import subprocess
 
-def run_garak_command(model_type:str , model_name:str, generations:int):
+def run_garak_command(model_type:str , model_name:str, probes:str, generations:int):
     command = [
-        'python', '-m', 'garak',
+         'garak',
         '--model_type', model_type,
         '--model_name', model_name,
-        '--probes', 'lmrc.Profanity',
+        '--probes', probes,
         '--generations', generations
     ]
+    # print (model_type)
     print(type("sucess"))
 
     try:
@@ -18,4 +19,7 @@ def run_garak_command(model_type:str , model_name:str, generations:int):
     return 0
 
 if __name__ == "__main__":
-    print("main")
+    # print("main")
+    model_type = 'huggingface'
+    run_garak_command(model_type, 'gpt2', 'lmrc.Profanity', '2')
+
