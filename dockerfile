@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
 
-CMD ["streamlit" , "run", "app/app.py"]
+EXPOSE 8501
+
+CMD ["streamlit" , "run", "app/main.py", "--server.port=8501", "--server.address=0.0.0.0"]

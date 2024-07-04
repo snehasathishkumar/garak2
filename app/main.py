@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-from app.cli import run_garak_command
+from cli import run_garak_command
 import subprocess
 import streamlit.components.v1 as components
 
